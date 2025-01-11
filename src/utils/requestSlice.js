@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const requestSlice = createSlice({
   name: "request",
-  initialState: "null",
+  initialState: null,
   reducers: {
     addReqeust: (state, action) => action.payload,
   },

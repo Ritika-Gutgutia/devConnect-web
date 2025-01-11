@@ -54,6 +54,7 @@ const Requests = () => {
           gender,
           skills,
         } = request.fromUserId;
+
         return (
           <div
             key={_id}
