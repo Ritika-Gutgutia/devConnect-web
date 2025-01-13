@@ -20,9 +20,10 @@ const Navbar = () => {
           withCredentials: true,
         }
       );
+
+      navigate("/login");
       dispatch(removeUser());
       dispatch(removeFeed());
-      navigate("/login");
     } catch (err) {
       //handle error logic
     }

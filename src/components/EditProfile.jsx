@@ -8,7 +8,7 @@ import { BASE_URL } from "../utils/constants";
 import { addUser } from "../utils/userSlice";
 
 const EditProfile = ({ user }) => {
-  const { firstName, lastName, age, gender, photoUrl, skills } = user;
+  const { firstName, lastName, age, gender, photoUrl, skills, about } = user;
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
 
@@ -19,6 +19,7 @@ const EditProfile = ({ user }) => {
     gender: gender,
     photoUrl: photoUrl,
     skills: skills,
+    about: about,
   });
 
   const handleChange = (e) => {
@@ -41,6 +42,7 @@ const EditProfile = ({ user }) => {
           photoUrl: profile.photoUrl,
           gender: profile.gender,
           skills: profile.skills,
+          about: profile.about,
         },
         {
           withCredentials: true,
@@ -136,6 +138,19 @@ const EditProfile = ({ user }) => {
                 onChange={(e) => handleChange(e)}
               />
             </label>
+            <label className="form-control w-full max-w-xs my-2">
+              <div className="label">
+                <span className="label-text">About </span>
+              </div>
+              <input
+                type="text"
+                name="about"
+                value={profile.about}
+                placeholder="Type here"
+                className="input input-bordered w-full max-w-xs"
+                onChange={(e) => handleChange(e)}
+              />
+            </label>
           </div>
 
           <div className="card-actions justify-end my-4">
@@ -145,7 +160,24 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
       </div>
-      <UserCard user={profile} />
+      <div>
+        <div className="card bg-base-300 w-96 shadow-xl">
+          <figure>
+            <img
+              className="w-full h-60 object-cover"
+              src={profile.photoUrl}
+              alt="user"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{firstName + " " + lastName}</h2>
+            {profile.age && profile.gender && (
+              <p>{profile.age + ", " + profile.gender}</p>
+            )}
+            <p>{profile.about}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
