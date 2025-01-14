@@ -10,7 +10,6 @@ const feedSlice = createSlice({
       const modifiedFeedArr = state.filter(
         (user) => user._id !== action.payload
       );
-      console.log(modifiedFeedArr);
       return modifiedFeedArr;
     },
     removeFeed: (state, action) => null,

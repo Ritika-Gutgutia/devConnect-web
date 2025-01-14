@@ -15,7 +15,6 @@ const Requests = () => {
         withCredentials: true,
       });
       dispatch(addReqeust(res.data.data));
-      console.log(res.data.data);
     } catch (err) {
       console.log(err.message);
     }
@@ -51,7 +50,7 @@ const Requests = () => {
   }
 
   return (
-    <div className="my-10">
+    <div className="my-10 pb-10">
       <h1 className="text-center text-bold text-white text-2xl text-bold">
         {" "}
         Connection Requests

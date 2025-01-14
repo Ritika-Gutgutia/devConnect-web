@@ -15,8 +15,8 @@ const EditProfile = ({ user }) => {
   const [profile, setProfile] = useState({
     firstName: firstName,
     lastName: lastName,
-    age: age,
-    gender: gender,
+    age: age || "",
+    gender: gender || "",
     photoUrl: photoUrl,
     skills: skills,
     about: about,
@@ -154,7 +154,7 @@ const EditProfile = ({ user }) => {
           </div>
 
           <div className="card-actions justify-end my-4">
-            <button className="btn btn-primary" onClick={onSaveProfile}>
+            <button className="btn btn-primary" onClick={() => onSaveProfile()}>
               Save Profile
             </button>
           </div>

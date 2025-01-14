@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-base-300 text-neutral-content items-center p-4 fixed bottom-0">
+      <footer className="footer bg-base-300 text-neutral-content items-center p-6 fixed bottom-0">
         <aside className="grid-flow-col items-center">
           <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
         </aside>
