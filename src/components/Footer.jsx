@@ -1,11 +1,19 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-base-300 text-neutral-content items-center p-6 fixed bottom-0">
-        <aside className="grid-flow-col items-center">
-          <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+      <footer className="footer bg-base-300 text-neutral-content px-10 py-4 fixed bottom-0">
+        <aside className="flex flex-col items-left">
+          <p className="pb-10">
+            Copyright © {new Date().getFullYear()} - All right reserved
+          </p>
+          <Link to="/terms-and-conditions">Terms and Conditions</Link>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/refund-cancellations">Refund-Cancellations</Link>
+          <Link to="contact-us">Contact Us</Link>
         </aside>
-        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <nav className="grid-flow-col gap-4  md:justify-self-end">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"

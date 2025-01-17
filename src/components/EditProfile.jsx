@@ -55,7 +55,7 @@ const EditProfile = ({ user }) => {
   };
 
   return (
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center my-10 pb-16">
       <div className="card bg-base-300 w-96 shadow-xl mx-10">
         <div className="card-body">
           <h2 className="card-title">Edit Profile</h2>
@@ -170,7 +170,9 @@ const EditProfile = ({ user }) => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{firstName + " " + lastName}</h2>
+            <h2 className="card-title">
+              {profile.firstName + " " + profile.lastName}
+            </h2>
             {profile.age && profile.gender && (
               <p>{profile.age + ", " + profile.gender}</p>
             )}

@@ -50,7 +50,7 @@ const Requests = () => {
   }
 
   return (
-    <div className="my-10 pb-10">
+    <div className="my-10 pb-40">
       <h1 className="text-center text-bold text-white text-2xl text-bold">
         {" "}
         Connection Requests
