@@ -11,6 +11,7 @@ import TermsAndConditions from "./components/TermsAndConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import RefundCancellations from "./components/RefundCancellations";
 import ContactUs from "./components/ContactUs";
+import GoPremium from "./components/GoPremium";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/connections" element={<Connections />} />
               <Route path="/requests" element={<Requests />} />
+              <Route path="/go-premium" element={<GoPremium />} />
               <Route
                 path="/terms-and-conditions"
                 element={<TermsAndConditions />}

@@ -1,6 +1,6 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="flex flex-col my-10 pb-80 gap-2 ">
+    <div className="flex flex-col gap-2 my-10 pb-80">
       <h1 className="text-4xl font-bold text-white text-center">
         PRIVACY POLICY
       </h1>

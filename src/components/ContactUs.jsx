@@ -5,7 +5,7 @@ const ContactUs = () => {
       <div className="flex flex-col gap-2 items-left pl-20">
         <p>In case of any query feel free to contact us!</p>
         <p>Mail us at devconnect.dc@gmail.com.</p>
-        <p>Our operational address is West Bengal</p>
+        <p>Our operational address is West Bengal.</p>
       </div>
     </div>
   );
